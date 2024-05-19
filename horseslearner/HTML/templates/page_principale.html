@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Horses Learner</h1>
+        <nav>
+            <ul>
+                <li><a href="page_principale.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="button-container">
+            <button id="button_galops">Galops</button>
+            <button id="button_environnement">Environnement</button>
+            <button id="button_races">Les Races</button>
+            <button id="ramucho">Ramucho</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Célio et Lou. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('button_galops').addEventListener('click', function() {
+            window.location.href = 'page_galops.html';
+        });
+
+        document.getElementById('button_environnement').addEventListener('click', function() {
+            window.location.href = 'page_environnement.html'; 
+        });
+
+        document.getElementById('button_races').addEventListener('click', function() {
+            window.location.href = 'page_races.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html') // Assurez-vous que le chemin est correct
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

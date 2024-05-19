@@ -1,0 +1,93 @@
+body {
+    font-family: Coco, sans-serif;
+    background-color: black;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header {
+    background-color: black;
+    padding: 15px;
+}
+
+header h1 {
+    font-family: Coco, sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #666;
+}
+
+main {
+    background-color: black;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    background-color: #f6d9d7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+.hidden-text {
+    display: none;
+}
+

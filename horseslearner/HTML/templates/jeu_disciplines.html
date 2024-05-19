@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le jeu des disciplines !</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        label {
+            color: black; /* Couleur du texte */
+            font-size: 16px; /* Taille de la police */
+            font-family: Coco, sans-serif; /* Police de caractères */
+        } 
+        ul {
+            list-style-type: none;
+            padding-left: 0; /* Optionnel : pour éviter un espace supplémentaire */
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-container input[type="checkbox"] {
+            width: 20px; /* Largeur de la case à cocher */
+            height: 20px; /* Hauteur de la case à cocher */
+            margin-right: 10px; /* Marge à droite de la case à cocher */
+        }
+        #totalPoints {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #f6d9d7;
+        color: black;
+        transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Horses Learner</h1>
+        <nav>
+            <ul>
+                <li><a href="page_principale.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Disciplines équestres</h1>
+        <section>
+            <ul id="disciplinesList">
+            
+            </ul>
+        </section>
+        <div class=button-container>
+            <input type='button' class="button" value="Commencer" onclick="createDisciplinesList()">
+            <input type='button' class="button" value="Valider" onclick="calculatePoints()">
+        </div>
+        <div id="totalPoints"></div> <!-- Div pour afficher le total des points -->
+    </main>
+    <footer>
+        <p>© 2024 Horses Learner. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Insérez les données JSON dans une balise script -->
+    <script>
+        // Données JSON simulées
+        const disciplines = {
+            "Amazone": "oui",
+            "L'attelage": "oui",
+            "Camargue": "oui",
+            "CCE": "oui",
+            "Course de galop ou de trot monté ou attelé": "oui",
+            "Course de trot": "oui",
+            "Doma Vaquera": "oui",
+            'Dressage': "oui",
+            "Dressage paraéquestre": "oui",
+            "Horse-javelot (HJ)": "non",
+            "Prestigieuse": "non",
+            "La calèche": "non",
+            "La camarguaise": "non",
+            "CEC": "non",
+            "Galoping": "non",
+            "Trotting": "non",
+            "Toma Vaquero": "non",
+            "Equifeel": "oui",
+            "Equifell": "non",
+            "Equifun": 'oui',
+            "Equitation de travail": "oui",
+            "Equitation soutenue": "non",
+            "Equitation islandaise": 'oui',
+            "Equitation irlandaise": 'non',
+            "Endurance": 'oui',
+            "Persévérance": 'non',
+            "Endurance en attelage": 'oui',
+            "Endurance en calèche": "non",
+            "Horse-ball": 'oui',
+            "Hunter": "oui",
+            'Hinter': 'non',
+            "CSO": "oui",
+            "COS": 'non',
+            "Polo": "oui",
+            "Horse-Golf": 'non',
+            "Pony-games": 'oui',
+            "Ski joëring": 'oui',
+            "Ski de fond équestre": 'non',
+            "TREC": 'oui',
+            'TREK': 'non',
+            "Voltige": 'oui',
+            "Accrobatie": 'non',
+            "Western equitation": 'oui'
+        };
+
+        // Fonction pour créer la liste de disciplines
+        function createDisciplinesList() {
+            const disciplinesContainer = document.getElementById("disciplinesList");
+            disciplinesContainer.innerHTML = ''; // Efface la liste précédente
+
+            for (const [discipline, points] of Object.entries(disciplines)) {
+                const checkboxContainer = document.createElement("div");
+                checkboxContainer.classList.add("checkbox-container");
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.name = discipline;
+                checkbox.value = points; // Utiliser la valeur 'oui' ou 'non'
+                checkboxContainer.appendChild(checkbox);
+
+                const label = document.createElement("label");
+                label.textContent = discipline;
+                checkboxContainer.appendChild(label);
+
+                disciplinesContainer.appendChild(checkboxContainer);
+            }
+        }
+
+        // Fonction pour calculer les points
+        function calculatePoints() {
+            const disciplinesList = document.getElementById("disciplinesList");
+            let totalPoints = 0;
+            for (const disciplineCheckbox of disciplinesList.querySelectorAll('input[type="checkbox"]')) {
+                if (disciplineCheckbox.checked) {
+                    // Ajouter ou enlever des points en fonction de la valeur de la case
+                    totalPoints += disciplineCheckbox.value === "oui" ? 1 : -1;
+                }
+            }
+            const totalPointsElement = document.getElementById("totalPoints");
+            totalPointsElement.textContent = "Total des points : " + totalPoints; // Afficher le total des points dans la page HTML
+        }
+    </script>
+</body>
+</html>
