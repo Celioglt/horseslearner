@@ -1,0 +1,202 @@
+/* styles.css */
+
+/* Style global du corps de la page */
+body {
+    font-family: 'Coco', sans-serif;
+    background-color: black;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: black;
+    padding: 15px;
+}
+
+header h1 {
+    font-family: 'Coco', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Navigation dans l'en-tête */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #666;
+}
+
+/* Contenu principal */
+main {
+    background-color: black;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    background-color: #f6d9d7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Container général */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container des boutons */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+/* Texte caché */
+.hidden-text {
+    display: none;
+}
+
+/* Liens de navigation */
+li a {
+    color: white;
+}
+
+/* Groupe de boutons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group .small-btn {
+    flex: 1 0 18%;
+    max-width: 18%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Coco', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.small-btn:hover {
+    background-color: #f6d9d7;
+}
+
+/* Bouton principal de section */
+.btn-top {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Coco', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.btn-top:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+/* Ajustement du texte dans les sections */
+.text {
+    padding-top: 40px; /* Ajouter un décalage pour éviter que le texte ne soit caché sous le bouton */
+}
+
+/* Styles utilitaires pour sections */
+.collapsed .text {
+    display: none;
+}
+
+.expanded .text {
+    display: block;
+}
+.image-center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.open-page {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: auto; /* This will push the button to the right */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: Coco, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.open-page:hover {
+    background-color: #f6d9d7;
+}
+.flashcard {
+    display: flex; /* Utilisation de flexbox pour positionner les éléments */
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: space-between; /* Aligner les éléments sur l'espace restant */
+}
