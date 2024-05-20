@@ -1,0 +1,341 @@
+body {
+    font-family: Coco, sans-serif;
+    background-color: #191e28;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #191e28;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+.brown {
+    color: brown;
+}
+
+header h1 {
+    font-family: 'Coco', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+header h2 {
+    color: #ffffff;
+}
+
+li {
+    padding: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Navigation dans l'en-tête */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #666;
+}
+
+/* Contenu principal */
+main {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Sections */
+section {
+    background-color: #f6d9d7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    align-items: center;
+}
+
+
+section p {
+    text-align: left;
+}
+section h2 {
+    text-align:center;
+}
+
+.button {
+    background-color: #191e28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.blue{
+    background-color: #191e28;
+}
+.pink{
+    color:#f6d9d7
+}
+.button:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+div {
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    height:50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px; /* Coins arrondis pour le tableau */
+    overflow: hidden; 
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    background-color:#f2f2f2 ;
+}
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Container général */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Container des boutons */
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+/* Texte caché */
+.hidden-text {
+    display: none;
+}
+
+/* Groupe de boutons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group .small-btn {
+    flex: 1 0 18%;
+    max-width: 18%;
+    background-color: white;
+    color: black;
+    border: 1px solid #191e28;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Coco', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.small-btn:hover {
+    background-color: #f6d9d7;
+    color:black;
+}
+
+/* Bouton principal de section */
+.btn-top {
+    background-color: #191e28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Coco', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.btn-top:hover {
+    background-color: #f6d9d7;
+    color: black;
+}
+
+/* Ajustement du texte dans les sections */
+.text {
+    padding-top: 40px; /* Ajouter un décalage pour éviter que le texte ne soit caché sous le bouton */
+}
+
+/* Styles utilitaires pour sections */
+.collapsed .text {
+    display: none;
+}
+
+.expanded .text {
+    display: block;
+}
+
+.image-center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+
+.open-page {
+    background-color: #191e28;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: Coco, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.open-page:hover {
+    background-color: #f6d9d7;
+}
+
+.flashcard {
+    display: flex;
+    flex-direction: column;
+}
+
+.image_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#photo-and-bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.container-bullet {
+    display: flex;
+    align-items: center;
+    width: 100;
+}
+
+.left {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center; /* Adjust the spacing between image and bullet list */
+}
+
+.bullet-list {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.bullet-list li {
+    margin-bottom: 5px;
+}
+
+.centered {
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.two-columns-list ul {
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+    width:60%;
+
+}
+
+
+

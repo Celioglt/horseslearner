@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Importation de la bibliothèque Font Awesome -->
+    <style>
+        /* Styles pour le menu déroulant */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6d9d7;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown.active .dropdown-content { /* Ajout de la classe 'active' pour afficher le menu déroulant */
+            display: block;
+        }
+
+        .dropbtn {
+            background-color: #f6d9d7;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Style pour l'icône */
+        .fa-bars {
+            margin-right: 5px;
+        }
+
+        /* Style pour les liens du menu */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Style pour les liens du menu au survol */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Horses Learner</h1>
+        <nav>
+            <div class="dropdown" onclick="toggleMenu(this)">
+                <button class="dropbtn"><i class="fas fa-bars"></i>Menu</button> 
+                <div class="dropdown-content">
+                    <a href="/HTML/index.html">Accueil</a>
+                    <a href="/HTML/templates/les_equides.html">Les équidés</a>
+                    <a href="/HTML/templates/races/page_races.html">Les races</a>
+                    <a href="/HTML/templates/environnement/environnement.html">Environnement</a>
+                    <a href="/HTML/templates/biologie/biologie.html">Biologie</a>
+                    <a href="/HTML/templates/bien_etre/bien_etre_page.html">Bien-être</a>
+                    <a href="/HTML/templates/about.html">À propos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu(element) {
+            element.classList.toggle('active'); // Ajoute ou supprime la classe 'active' lorsque le menu est cliqué
+        }
+    </script>
+
+</body>
+</html>

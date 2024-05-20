@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morphologie</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+     <div id="header-placeholder"></div>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .white{
+            background:white;
+        }
+        
+        section ul{
+            padding:20px;
+
+        }
+        section ul li{
+            text-align:left;
+        }
+    </style>
+
+</head>
+<body>
+ <main>
+    <h2> Morphologie </h2>
+    
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="#definition" onclick="toggleSection('definition')">Définition</a></li>
+                <li><a href="#definition" onclick="toggleSection('morphologie_generale')">Morphologie Générale</a></li>
+                <li><a href="#definition" onclick="toggleSection('parties_cheval')">Les parties du cheval</a></li>
+                
+            
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section id='definition'> 
+        <h3>Qu'est ce que la morphologie ?</h3>
+        <p>La morphologie du cheval est, dans le domaine de l'hippologie, la description physique externe d'un cheval.</p>
+        <p>Il ne faut pas confondre la morphologie avec l'anatomie, qui est la description des parties internes du cheval.</p>
+    </section>
+
+    <section id='morphologie_generale'>
+        <h3>Morphologie générale</h3>
+        <p>Le physique extérieur d'une façon globale est appelé morphologie générale.</p>
+        <p>La morphologie dite "générale" se base sur trois thèmes :</p>
+        <div class='button-container'>
+            <button data-target="section_taille"> La taille</button>
+            <button data-target="section_profil">Le profil</button>
+            <button data-target="section_proportions">Le rapport de ses différentes proportions</button>
+            <button data-target="section_poids">Le poids</button>
+        </div>
+
+        <section class='white hidden' id="section_taille">
+            <h2>Taille</h2>
+            <p>Les chevaux présentent une grande diversité de taille. Les plus petits poneys ne toisent pas plus de 50cm au garrot, les Shires dépassent régulièrement les 2m au garrot. </p>
+            <p>La taille est aussi appelée la toise. La taille est la distance du sol jusqu'à la pointe du garrot (os situé à la base de l'encolure).</p>
+            <p>La toise doit se prendre sur un sol droit. Le cheval est ferré ou non. Elle s'exprime en centimètre ou en mètre.</p>
+            <p>Pour chaque taille, il existe des catégories :</p>
+            <ul>
+                <li>Les hypométriques : les plus petits comme la race <a class='brown' href='/HTML/templates/races/shetland.html'>Shetland</a> ou <a class='brown' href='/HTML/templates/races/falabella.html'>Falabella</a>.</li>
+                <li>Les eumétriques : les chevaux de taille considérée comme classique soit environ 1,55m au garrot.</li>
+                <li>Les hypermétriques : les spécimens les grands comme la race <a class='brown' href='/HTML/templates/races/shire.html'>Shire</a>.</li>
+            </ul>
+        </section>
+
+        <section class='white hidden' id="section_profil">
+            <h2>Profil</h2>
+            <p>Le profil définit l'apparance de la tête et particulièrement du profil.</p>
+            <p>Il s'agit de la conformation de l'os du chanfrein. Certains types de profil sont propres à la race du cheval.</p>
+            <p>Les profils peuvent être de type :</p>
+         
+                <ul>Dit convexe ou busqué : Le chanfrein est de forme arrondie :</ul>
+                <img class='image-center' src='../../images/convexe.jpeg'/>
+                <ul>Dit rectiligne ou droit : Le chanfrein est droit :<ul>
+                <img class='image-center' src='../../images/rectiligne.jpeg'/>
+                <ul>Dit concave ou creux : Le chanfrein est creusé en son milieu :</ul>
+                <img class='image-center' src='../../images/concave.jpeg'/>
+       
+            <p>Le préfixe sub désigne un profil peu marqué tandis que le préfixe ultra désigne un profil très marqué.</p>
+
+
+         </section>
+
+        <section class='white hidden' id="section_proportions">
+            <h2>Proportions</h2>
+            <p>L'aspect global et général d'un cheval est appelé proportions. La proportion d'un cheval prends en compte la taille des membres par rapport à la taille du corps et la largeur du cheval par rapport à sa taille.</p>
+            <p>On dénombre trois catégories de chevaux :</p>
+            <ul>
+                <li><strong class='bold'>Le longiligne ou dolichomorphe</strong> :  Ce sont les chevaux dits <strong class='bold'>légers</strong>.
+                <p>Elancés ils sont plus grands que larges et disposent des grands membres.</p>
+                <p>Il s'agit essentiellement des chevaux de courses et d'endurance, avec par exemple la race de cheval <a class='brown' href='/HTML/templates/races/pur_sang.html'>Pur-Sang</a>, la race <a class='brown' href='/HTML/templates/races/pur_sang_arabe.html'>Pur-Sang Arabe</a>, la race <a class='brown' href='/races/akhal_teke.html'>akhal-Teke</a>.</p></li>
+
+                <li><strong class='bold'>Le médioligne ou mésomorphe</strong> : Ce sont les chevaux de morphologie dite  <strong class='bold'>moyenne</strong>.
+                <p>Leurs proportions sont généralement équivalentes. Beaucoup de chevaux de selle sont de type médioligne comme la race <a class='brown' href='/HTML/templates/races/selle_francais.html'>Selle-Français</a> et la race <a class='brown' href='/HTML/templates/races/anglo_arabe.html'>Anglo-Arabe</a>.</p></li>
+
+                <li><strong class='bold'>Le bréviligne ou brachymorphe</strong> : Ce sont des chevaux au profil trapu, rond et de petits membres. Ils sont <strong class='bold'>lourds et massifs</strong>.
+                <p>Le cheval bréviligne peut être un cheval de trait avec la race de cheval de  <a class='brown' href='templates/races/races/trait_breton.html'>Trait Breton</a> ou des poneys rustiques comme la race  <a class='brown' href='/HTML/templates/races/shetland.html'>Shetland</a>.</p></li>
+        </section>
+
+        <section class='white hidden' id="section_poids">
+            <h2>Poids</h2>
+            <p>Le poids moyen d'un cheval de selle de taille classique est d'environ 500kg et est un cheval dit <stong class='bold'>moyen</strong>.</p>
+            <p> La race <a class='brown' href='templates/races/shetland.html'>Shetland</a> et la race <a class='brown' href='/HTML/templates/races/falabella.html'> Fallabella<a/> sont des races légères et les chevaux de trait, la race <a class='brown' href='/HTML/templates/races/shire.html'>Shire</a> sont des races <stong class='bold'>lourdes</stong>.</p>
+            <p>Certains chevaux peuvent peser 1200kg voir plus.</p>
+        </section>
+
+    </section>
+
+    <section id='parties_cheval'>
+        <h3> Les parties du cheval</h3>
+        <p>Les parties du corps du cheval se divise en trois parties :</p>
+       
+        <img class='image-center' src='../../images/parties_cheval.jpeg'/>
+     
+        <div class='button-container'>
+            <button data-target="avant_main"> L'avant-main</button>
+            <button data-target="corps">Le corps</button>
+            <button data-target="arriere_main">L'arrière-main</button>
+        </div>
+        
+
+        <section class='white hidden' id="avant_main">
+            <h2>L'avant-main</h2>
+            <p>La partie de l'avant-main d'un cheval se compose en trois grandes parties :</p>
+            <ul>
+                <li>La tête</li>
+                <li>L'encolure</li>
+                <li>Les membres antérieurs</li>
+            </ul>
+
+            <h3>La tête</h3>
+            <p>Composée d'un certain nombre d'organes, la tête du cheval constitue la partie du corps qui donne le plus d'informations pour juger, en premier lieu la qualité d'un individu, mais aussi son énergie, son intelligence et, bien entendu, son caractère.</p>
+            <p>Pour examiner la tête du cheval, il faut commencer par l'observer de profil afin de pouvoir déterminer sa forme, sa longueur et son port.</p>
+            <p>Ensuite il faut continuer en se positionnant de face puis terminer par une analyse détaillée de ses différentes parties, c'est-à-dire la nuque, l'appareil masticateur, la bouche, le bout du nez, les naseaux, les oreilles et les yeux.</p>
+            <p>Le profil de la tête, qui peut être concave, convexe, rectiligne ou un mixte de ceux-ci, doit être en harmonie avec sa longueur. Par exemple, elle est longue chez le Pur Sang qui possède un profil rectiligne ou court chez le Breton qui a un profil concave.</p>
+            <p>La tête est également liée directement au type morphologique d'ensemble du cheval qui peut être longiligne, médioligne ou bréviligne. Elle contribue d'ailleurs à définir ce dernier.</p>
+            <p>Élément capital pour l'équilibre et la conduite du cheval, le port de la tête fait, en général, au repos un angle de 90 degrés avec la direction de son encolure.
+            <p>Quand il est plus ouvert on dit que le cheval « porte au vent ». Par ailleurs lorsque le cheval s'encapuchonne en rapprochant sa tête de son poitrail, lors d'un ramener au repos, il est souvent difficile à conduire pendant la marche.</p>
+            <p>La largeur du front a également son importance où l'on peut définir si le cheval est brachycéphale ou dolichocéphal. Le cheval brachycéphale possède un crâne large avec une importante distance entre ses yeux.</p>
+            <p>Fréquent chez le cheval de sang il s'associe souvent à un profil rectiligne ou concave. Le cheval dolichocéphale, est caractérisé par un développement plus important de sa face par rapport à son crâne, ainsi que par des ganaches lourdes et une réduction de la distance entre les yeux.</p>
+            <p> Il est généralement associé au profil busqué ou convexe et témoignerait d'un éloignement par rapport au cheval de sang.</p>
+            <footer>
+                Auteur : Claudie Quénéhen Ouadah : <a href="https://www.aucoeurdeschevaux.com/">Source</a>
+            </footer>
+   
+                <img class="centered-image" src='../../images/tete.png' alt="Image centrée">
+
+                
+
+            <h3> L'encolure</h3>
+            <p>L′encolure du cheval est la partie de l'anatomie du cheval correspondant au cou, reliant sa tête à son corps.</p>
+            <p> L'encolure démarre au niveau de la nuque et s'arrête au niveau du garrot. Seules ses vertèbres atlas et axis sont mobiles, permettant une flexion de la tête sur l'encolure au seul niveau de la nuque.</p>
+            <p> L'encolure, d'une manière générale, se compose ensentiellement de muscle.</p>
+            <p> On y retrouve quelques éléments morphologiques du cheval : la crinière et la trachée.</p>
+            <p>C'est sur cette partie du corps du cheval que l'on peut apprécier les différents types morphologiques d'encolure.</p>
+            <img class="image-center" src='../../images/encolures.jpeg' alt="encolures">
+
+            <h3> Les membres antérieurs</h3>
+            <p>Le membre antérieur d'un cheval se compose lui aussi de nombreuses parties.</p>
+            <p>Formé des régions allant de l'épaule au sabot, l'antérieur, ou membre antérieur, est avant tout composé de deux premiers segments qui sont disposés en face de la partie avant de la cage thoracique.</p>
+            <p>Le squelette du membre antérieur est, quant à lui, formé de la scapula ou omoplate, de l'humérus, de l'ulna ou cubitus, du radius, du carpe, des métacarpiens principaux et rudimentaires, des trois phalanges complétées des grands sésamoïdes et de l'os naviculaire.
+            <p> Les muscles, qui composent l'antérieur, peuvent être divisés en muscles extenseurs, qui ouvrent les angles articulaires, et en muscles fléchisseurs, qui, inversement, les ferment. Durant la marche, l'effet oppose les muscles qui assurant la projection du membre vers l'avant, nommé aussi protraction, avec ceux qui rétractent le membre vers l'arrière, créant ainsi les forces de propulsion.</p>
+            <p> Ces derniers n'ont pas un rôle fonctionnel très important pendant la marche normale. Ils sont par contre exercés dans certains airs de manège.<p>
+            <footer>
+                Auteur : Claudie Quénéhen Ouadah : <a href="https://www.aucoeurdeschevaux.com/">Source</a>
+            </footer>   
+                <img class="centered-image" src='../../images/membre_anterieur.png' alt="Image centrée">
+
+
+
+
+        </section>
+
+
+    </section>
+
+    <script>
+       
+
+        const boutons = document.querySelectorAll('button[data-target]');
+
+
+        boutons.forEach(bouton => {
+            bouton.addEventListener('click', () => {
+                // Récupérez l'ID de la section cible depuis l'attribut data-target
+                const targetId = bouton.getAttribute('data-target');
+                const section = document.getElementById(targetId);
+
+                // Fermer toutes les autres sections
+                const allSections = document.querySelectorAll('section.white');
+                allSections.forEach(otherSection => {
+                    if (otherSection.id !== targetId) {
+                        otherSection.classList.add('hidden');
+                    }
+                });
+
+                // Utilisez la fonction toggleSection pour afficher/cacher la section cible
+                toggleSection(targetId);
+            });
+        });
+    </script>
+
+</body>
+</html>
+

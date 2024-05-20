@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Empreintes</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+    <style>
+        #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        img {
+            max-width: 300px; /* Définit une largeur maximale de 300 pixels pour l'image */
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 300px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    </style>
+
+<body>
+    <div id="header-placeholder"></div> 
+
+    <main>
+        <header>
+            <h1> Les empreintes des mamifères </h1>
+        </header>
+        <section>
+        <p>Les animaux à retrouver sont les suivants :<p>
+        <div class="button-container" id="animalButtons"></div>
+        </section>
+
+        <section>
+
+        <div id="sections"></div>
+        <div id="feedback"></div>
+        </section>
+
+    </main>
+
+    <script>
+
+        const animaux = {
+                "empreintes/Martre.jpeg": "martre",
+                "empreintes/Chat.jpeg": "chat",
+                "empreintes/Cerf - Biche - Faon.jpeg": "cerf",
+                "empreintes/Taupe.jpeg": "taupe",
+                "empreintes/Chevreuil - Chevrette - Faon.jpeg" : "chevreuil",
+                "empreintes/Hérisson.jpeg" : "hérisson",
+                "empreintes/Chien.jpeg" : "chien",
+                "empreintes/Loup.jpeg" : "loup",
+                "empreintes/Putois.jpeg" : "putois",
+                "empreintes/Blaireau.jpeg" : "blaireau",
+                "empreintes/Fouine.jpeg" : "fouine",
+                "empreintes/Marmotte.jpeg" : "marmotte",
+                "empreintes/Lièvre.jpeg" : "lièvre",
+                "empreintes/Sanglier - Laie - Marcassins.jpeg" : "sanglier",
+                "empreintes/Castor.jpeg" : "castor",
+                "empreintes/Renard.jpeg" : "renard",
+                "empreintes/Lapin.jpeg" : "lapin",
+                "empreintes/Ragondin.jpeg" : "ragondin",
+                "empreintes/Belette - Hermine.jpeg" : "belette",
+
+            };
+
+    
+        // Fonction pour créer les sections d'empreintes pour chaque animal
+        function createSections() {
+            const sectionsContainer = document.getElementById("sections");
+            const buttonsContainer = document.getElementById("animalButtons");
+
+            for (const [empreinte, animal] of Object.entries(animaux)) {
+                // Créer une section pour chaque empreinte
+                const section = document.createElement("div");
+                section.classList.add("section");
+
+                const image = document.createElement("img");
+                image.src = empreinte;
+                image.alt = `Empreinte de ${animal}`;
+                section.appendChild(image);
+
+                const input = document.createElement("input");
+                input.type = "text";
+                input.placeholder = "Deviner l'animal";
+                section.appendChild(input);
+
+                const button = document.createElement("button");
+                button.textContent = "Vérifier";
+                button.classList.add("button");
+                button.onclick = () => verifierReponse(animal, input.value.toLowerCase(), feedback);
+                section.appendChild(button);
+
+                const feedback = document.createElement("div");
+                feedback.classList.add("feedback");
+                section.appendChild(feedback);
+
+                sectionsContainer.appendChild(section);
+
+                // Créer un bouton pour chaque animal dans la liste des animaux à retrouver
+                const animalButton = document.createElement("button");
+                animalButton.textContent = animal.charAt(0).toUpperCase() + animal.slice(1); // Capitaliser la première lettre
+                animalButton.classList.add("button");
+                animalButton.onclick = () => highlightAnimalSection(empreinte);
+                buttonsContainer.appendChild(animalButton);
+            }
+        }
+
+        // Fonction pour vérifier la réponse
+        function verifierReponse(expectedAnimal, reponse, feedback) {
+            if (reponse === expectedAnimal) {
+                feedback.textContent = `Bravo! Vous avez deviné correctement pour l'empreinte de ${expectedAnimal}.`;
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = `Désolé, ce n'est pas la bonne réponse pour l'empreinte de ${expectedAnimal}. Essayez encore.`;
+                feedback.style.color = "red";
+            }
+        }
+
+        // Fonction pour mettre en évidence la section de l'animal sélectionné
+        function highlightAnimalSection(empreinte) {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                section.style.backgroundColor = ""; // Reset background color
+            });
+
+            const targetSection = Array.from(sections).find(section => section.querySelector("img").src.includes(empreinte));
+            if (targetSection) {
+                targetSection.style.backgroundColor = "#f0f8ff"; // Light blue background for highlighting
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Appel de la fonction pour créer les sections au chargement de la page
+        window.onload = createSections;
+    </script>
+
+</body>
+</html>

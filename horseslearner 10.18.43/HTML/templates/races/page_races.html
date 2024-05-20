@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Races</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+     <div id="header-placeholder"></div>
+</head>
+<body>
+    <main>
+        <h1>Les Races</h1>
+        <div class='button-container'>
+            <button id='classifications'>Classifications</button>
+        </div>
+
+        <section class="collapsed" id="chevaux">
+            <div class="btn-container">
+                <button class="btn-top" onclick="toggleSection('chevaux')">Les chevaux de sang</button>
+                <div class="text hidden-text" id="pages_chevaux">
+                    <!-- Les boutons des pages seront affichés ici -->
+                </div>
+            </div>
+        </section>
+
+        <section class="collapsed" id="poneys">
+            <div class="btn-container">
+                <button class="btn-top" onclick="toggleSection('poneys')">Les poneys</button>
+                <div class="text hidden-text" id="pages_poneys">
+                    <!-- Les boutons des pages seront affichés ici -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    document.getElementById('classifications').addEventListener('click', function() {
+    window.location.href = '../classification_equidés.html';
+        });
+
+        // Tableau associatif de noms de dossiers et de leurs fichiers correspondants
+        var dossierFichiers = {
+            "chevaux": [
+                { id: 'anglo_arabe', name: 'Anglo Arabe' },
+                { id: 'aqps', name: 'AQPS' },
+                { id: 'camargue', name: 'Camargue' },
+                { id: 'castillon', name: 'Castillon' },
+                { id: 'cheval_corse', name: 'Cheval Corse' },
+                { id: 'auvergne', name: 'Cheval de Race Auvergne' },
+                { id: 'cheval_de_dessage_francais', name: 'Cheval de Dressage Français' },
+                { id: 'anglo_normand', name: 'Cheval de sport Anglo-Normand' },
+                { id: 'cheval_du_vercors', name: 'Cheval du Vercors de Barraquand' },
+                { id: 'henson', name: 'Henson' },
+                { id: 'merens', name: 'Mérens' },
+                { id: 'miniature_francais', name: 'Miniature Français' },
+                { id: 'selle_francais', name: 'Selle Français' },
+                { id: 'trotteur_francais', name: 'Trotteur Français' },
+                { id: 'arabe', name: 'Arabe' },
+                { id: 'barbe', name: 'Barbe' },
+                { id: 'creme', name: 'Crème' },
+                { id: 'criollo', name: 'Criollo' },
+                { id: 'irish_cob', name: 'Irish-Cob' },
+                { id: 'islandais', name: 'Islandais' },
+                { id: 'lipizan', name: 'Lipizan' },
+                { id: 'lustanien', name: 'Lustannien' },
+                { id: 'pur_sang', name: 'Pur-sang' },
+                { id: 'shygya', name: 'Shagya' },
+                { id: 'trakenher', name: 'Trakehner' }
+            ],
+            "poneys": [
+                { id: 'poney_français_de_selle', name: 'Poney français de selle' },
+                { id: 'pollok', name: 'Pollok' },
+                { id: 'highland', name: 'Highland' },
+                { id: 'new_forest', name: 'New Forest' },
+                { id: 'shetland', name: 'Shetland' },
+                { id: 'welsh', name: 'Welsh' },
+                { id: 'fjord_de_norvege', name: 'Fjord de Norvège' },
+                { id: 'haflinger', name: 'Haflinger' },
+                { id: 'connemara_d_irlande', name: 'Connemara d\'Irlande' }
+                // Ajoutez d'autres dossiers et leurs fichiers correspondants ici
+            ]
+        };
+
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var text = section.querySelector('.text');
+            section.classList.toggle('collapsed');
+            section.classList.toggle('expanded');
+            text.classList.toggle('hidden-text');
+            var smallButtons = text.getElementsByClassName('button');
+            for (var i = 0; i < smallButtons.length; i++) {
+                smallButtons[i].style.display = text.classList.contains('hidden-text') ? 'none' : 'inline-block';
+            }
+            if (!text.classList.contains('hidden-text')) {
+                afficherPages(sectionId);
+            }
+        }
+
+        function afficherPages(dossier) {
+            var fichiers = dossierFichiers[dossier]; // Récupère la liste des fichiers pour le dossier spécifié
+            var container = document.getElementById("pages_" + dossier);
+            container.innerHTML = ""; // Vide le contenu précédent
+            fichiers.forEach(function(fichier) {
+                var button = document.createElement("button");
+                button.textContent = fichier.name;
+                button.className = "button";
+                button.onclick = function() {
+                    ouvrirPage(fichier.id + '.html');
+                };
+                container.appendChild(button);
+            });
+        }
+
+        function ouvrirPage(nomPage) {
+            window.open(nomPage, "_blank");
+        }
+    </script>
+</body>
+</html>
+

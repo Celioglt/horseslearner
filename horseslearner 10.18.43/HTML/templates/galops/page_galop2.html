@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galops</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+    <div id="header-placeholder"></div>
+    
+    <header>
+        <h1>Flashcards Galop 1</h1>
+    </header>
+
+<body>
+    <div class="container" id="flashcards-container">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Célio et Lou. Tous droits réservés.</p>
+    </footer>
+
+        <script>
+            var questionsAnswers = [
+                { question : "Quels sont les modes de logement ?", answer: "Le box, le stalle et la pâture", url:'../bien_etre/logement.html'},
+                { question : "Quelles sont les deux familles d’aliments des équidés ?", answer: "Les fourrages et les concentrés", url:'../bien_etre/besoins.html'},
+                { question : "Donner deux exemples de fourages", answer : "La paille et le foin", url:'logement.html'},
+                { question : "Quelles sont les types de concentrés ?", answer : "Les céréales et les aliments complets"},
+                { question : "Donner les trois types de céréales", answer : "L’avoine, l’orge, le maÏs"},
+                { question : "Combien de litres d’eau un cheval boit-il par jour en moyenne  ?", answer : "20 à 40L" },
+                { question : "Combien mesurent au maximum les poney de type A ?", answer:"1,08m au garrot", url:'classification_equidés.html'},
+                { question : "Entre combien mesurent les poney de type B ?", answer : "Entre 1,08m et 1,30m au garrot", url:'../races/classification_equidés.html#section2'},
+                { question : "Entre combien mesurent les poney de type C ?", answer :"Entre 1,30m et 1,40m au garrot", url:'../races/classification_equidés.html#section2'},
+                { question : "Entre combien mesurent les poney de type D ?", answer :"Entre 1,40m et 1,48m au garrot", url:'../races/classification_equidés.html#section2' },
+                { question : "Quelles sont les deux principales activités équestres ?", answer: "L’animation et la compétition"},
+                { question : "Donner des types de compétitions ?", answer : 'Le CCE, le CSO, le dressage, l’equifeel, l’équifun, l’équitation western, les pony-games et la TREC' },
+                { question :  "Quelles sont les différentes selles existantes ?", answer : "La selle poney, la bardette à boudin, la selle creuse, la selle de randonnée, la selle polyvalente, la selle d’amazone, la selle d’obstacle, la selle camarguaise, la selle western et la selle de dressage"},
+                { question : "Décrire le trot assis", answer:"Allure sautée à deux temps égaux"},
+                { question :"Décrire le galop assis", answer : "Allure basculée à trois temps plus un temps de projection" },
+                { question : "Comment appelle-t-on l’action de l’assiette quand le bassin du cavalier accompagne l’allure ?", answer : "L’assiette neutre"},
+                { question : "Comment appelle-t-on l’action de l’assiette quand le bassin du cavalier agit d’avant en arrière ?",answer : "L’assiette impulsive"},
+                { question : "Comment appelle-t-on l’action quand le bassin du cavalier cesse l’accompagnement de l’allure ?", answer : "L’action ralentissante"},
+                { question : "Trois types de reprises en manège ou carrière?",answer :"Reprise formée, reprise à distances indéterminées, reprise libre" },
+                { question : "Qu’est ce que la ligne du milieu ?", answer : "La ligne qui coupe le manège ou la carrière en son milieu dans la longueur "},
+                { question : "Qui est prioritaire sur une piste ?", answer : "Le couple qui évolue à main gauche"},
+                { question : "Donner deux figures sans changement de main", answer : "Le cercle et la volte"},
+                { question : "Donner une figure avec changement de main", answer : "La diagonale"},
+                { question : "Donner deux figures particulières quant au changement de main", answer : "Donner deux figures particulières quant au changement de main" },
+                { question : "Quelles sont les trois grandes étapes du saut ?" , answer : "L’abord, le franchissement et la réception"}
+            ];
+        
+            var flashcardsContainer = document.getElementById('flashcards-container');
+            questionsAnswers.forEach(function(item, index) {
+                var card = document.createElement('div');
+                card.classList.add('flashcard'); // Ajoutez cette ligne pour ajouter la classe 'flashcard' à chaque carte
+                card.classList.add('card');
+
+                var question = document.createElement('div');
+                question.textContent = item.question;
+                question.classList.add('question');
+
+                var answer = document.createElement('div');
+                answer.textContent = item.answer;
+                answer.classList.add('answer');
+                answer.style.display = 'none';
+
+                var buttonContainer = document.createElement('div');
+                buttonContainer.classList.add('button-container');
+
+                var showAnswerBtn = document.createElement('button');
+                showAnswerBtn.textContent = 'Réponse';
+                showAnswerBtn.classList.add('show-answer');
+                showAnswerBtn.addEventListener('click', function() {
+                    answer.style.display = 'block';
+                    showAnswerBtn.style.display = 'none';
+                    hideAnswerBtn.style.display = 'inline-block';
+                });
+
+                var hideAnswerBtn = document.createElement('button');
+                hideAnswerBtn.textContent = 'Masquer';
+                hideAnswerBtn.classList.add('hide-answer');
+                hideAnswerBtn.style.display = 'none';
+                hideAnswerBtn.addEventListener('click', function() {
+                    answer.style.display = 'none';
+                    hideAnswerBtn.style.display = 'none';
+                    showAnswerBtn.style.display = 'inline-block';
+                });
+
+                var openPageBtn = document.createElement('button');
+                openPageBtn.classList.add('small-btn');
+                openPageBtn.textContent = "Plus d'infos";
+                openPageBtn.classList.add('open-page');
+                openPageBtn.dataset.url = item.url;
+                openPageBtn.addEventListener('click', function() {
+                    window.location.href = openPageBtn.dataset.url;
+                });
+
+                buttonContainer.appendChild(showAnswerBtn);
+                buttonContainer.appendChild(hideAnswerBtn);
+
+                card.appendChild(question);
+                card.appendChild(answer);
+                card.appendChild(buttonContainer);
+                card.appendChild(openPageBtn); // Append openPageBtn to the card
+
+                flashcardsContainer.appendChild(card);
+            });
+    </script>
+</body>
+</html>

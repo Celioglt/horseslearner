@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les équidés</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../JavaScripts/loadHeader.js"></script>
+    <script src="../JavaScripts/toggleMenu.js"></script>
+    <script src="../JavaScripts/toggleSection.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+
+<body>
+    <div id="header-placeholder"></div> 
+
+    <main>
+        
+        <header>
+            <h1> Les équidés </h1>
+            <nav>
+                <ul>
+                    <li><a href="#histoire" onclick="toggleSection('histoire')">Histoire</a></li>
+                    <li><a href="#classification" onclick="toggleSection('classification')">Classification MSW</a></li>
+                    <li><a href="#caracteristiques" onclick="toggleSection('caracteristiques')">Caractéristiques</a></li>
+                    <li><a href="#morphologie" onclick="toggleSection('morphologie')">Morphologie</a></li>
+                </ul>
+            </nav>
+        </header>
+    <img class='image_center' src='../images/evolution_cheval.jpeg'>
+    
+
+    <section id='histoire'>
+        
+        <h2> Histoire </h2>
+        <p class='left'>L’origine du cheval remonte à des milliers d’années, le cheval est le compagnon de travail idéal ainsi qu’un fidèle ami. Mais quelle est l’origine de notre animal à quatre pattes préféré ?</p>
+        <p class='left'>Il faut revenir 55 millions d’années en arrière, quand l’eohippus qui est l’ancêtre du cheval, habitait en Amérique du Nord. L’eohippus est un petit mammifère herbivore de petite taille (20 et 40 cm) possédant 4 orteils sur ses pattes avant, et 3 sur ses pattes arrières. Avec le temps, il a évolué et ses doigts sont devenus monodactyles (un seul doigt, qui est le sabot).</p>
+        <p class='left'>Puis, en raison des mauvaises conditions climatiques, ce petit cheval ancestral quitte l’Amérique du Nord pour aller en Eurasie.</p>
+        <p class='left'>Les peintures de la Grotte de Lascaux, vieilles d’environ 15 000 ans, sont les premières reproductions connues du cheval par l’homme.</p>
+        <p class='left'>En paléontologie, il est compliqué de déterminer si un fossile est celui d’un cheval ou celui d’un zèbre car leur squelette est identique. Cependant, une partie de l’ADN trouvé dans les os peut révéler l’espèce.</p>
+        <p class='left'>L’ancêtre direct du cheval est le Przewalski, sauvé de l’extinction grâce à des programmes de conservation.</p>
+    </section>
+
+        
+    <section id='classification'>
+        <h2> Classification MSW </h2>
+        <div class="grid-container">
+            <button><span class='bold'>Règne</span> : Animalis</button>
+            <button><span class='bold'>Embranchement</span> : Chordota</button>
+            <button><span class='bold'>Sous-embranchement</span> : Vertebra</button>
+            <button><span class='bold'>Classe</span> : Mamalia</button>
+            <button><span class='bold'>Sous-classe</span> : Theria</button>
+            <button><span class='bold'>Infra-classe</span> : Eutheria</button>
+            <button><span class='bold'>Ordre</span> : Perissodactyla</button>
+            <button><span class='bold'>Genre</span> : Equus</button>
+            <button><span class='bold'>Espèce</span> :  Equus caballus</button>
+        </div>
+        <p>Voir plus sur les classifications : <a class='brown' href="/HTML/templates/classification_equidés.html">Classifications</a><p>
+    </section>
+
+    <section class='two-columns-list' class='center' id='caracteristiques'>
+        <h2> Caractéristiques </h2>
+            <ul>
+                <li> <strong class='bold'>Alimentation : </strong>herbivore</li>
+                <li><strong class='bold'>Prédation : </strong>proie</li>
+                <li><strong class='bold'>Instinct : </strong>grégaire</li>
+                <li><strong class='bold'>Qualités : </strong>Équilibre, vitesse, visualisation spaciale</li>
+                <li><strong class='bold'>Gestation : </strong>11 mois</li>
+
+            </ul>
+    </section>
+    
+    <section id='morphologie'>
+        <h2> Morphologie du cheval</h2>
+        <div class="container-bullet">
+
+        <div class="left">
+            <img src='../images/morphologie.jpeg' alt="morphologie" /> 
+        </div>
+            <div class='left'>
+                <ul>
+                    <li>2 membres antérieurs</li>
+                    <li>2 membres postérieurs</li>
+                    <li>4 pieds à 1 doigt/pied</li>
+                    <li>4 pieds à 1 doigt/pied</li>
+                    <li>colonne vertébrale horizontale</li>
+
+                </ul>
+            </div>
+            <div class='right'>
+                <img src='../images/applombs_reguliers.jpeg'/>
+            </div>
+        </div>
+        <h3> Descriptions plus précises pour chaque cheval :</h3>
+            <ul>
+                <p> <strong class='bold'>- Taille</strong></p>
+                <p><strong class='bold'>- Profil </strong></p>
+                <p><strong class='bold'>- Le rapport de ses différentes proportions : </strong>hauteur au garrot,tour de taille,etc</p>
+                <p><strong class='bold'>- Poids </strong></p>
+            </ul>
+
+        <p>Voir plus sur la morphologie du cheval : <a class='brown' href="/HTML/templates/biologie/morphologie.html">Morphologie du cheval</p>
+        
+    
+    </section>
+    
+    
+
+    </main>
+    
+
+
+</body>
+</html>

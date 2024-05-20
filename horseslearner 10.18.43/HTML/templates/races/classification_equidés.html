@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classification des équidés</title>
     <link rel="stylesheet" href="/HTML/styles/styles.css">
+
     <script src="../JavaScripts/loadHeader.js"></script>
     <script src="../JavaScripts/toggleMenu.js"></script>
     <script>
@@ -15,77 +16,78 @@
 </head>
 <body>
 
-<main>
     <header>
-        <h1>Classification des équidés</h1>
-    </header>
-
-
-    <h2 id='centered'>Classification générale française</h2>
-    <header>
+        <h1>Horses Learner</h1>
         <nav>
             <ul>
-                <li><a href="#section1" onclick="toggleSection('section1')">Les races de sang</a></li>
-                <li><a href="#section2" onclick="toggleSection('section2')">Les poneys</a></li>
-                <li><a href="#section3"onclick="toggleSection('section3')">Les chevaux de trait</a></li>
-                <li><a href="#section3"onclick="toggleSection('section4')">Les ânes</a></li>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h3>Les races gérées</h3>
-        <p> On parle de race gérée lorsqu'il existe un stud-book ou un registre et une association de race ou un organisme de sélection agréés par le Ministère de l’Agriculture.</p>
-        <p> L’IFCE est garant de la mise en œuvre du règlement du stud-book, certifie les origines et effectue la tenue matérielle du livre généalogique. 
-        Il assure l’émission des documents d’identification pour les animaux de ces races. En 2021, elles étaient au nombre de 56 et elles peuvent être réparties selon le type des équidés : chevaux de sang, poneys, chevaux de trait et ânes.</p>
-    </section>
+    <main>
+        <h2>Classification générale française</h2>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#section1" onclick="toggleSection('section1')">Les races de sang</a></li>
+                    <li><a href="#section2" onclick="toggleSection('section2')">Les poneys</a></li>
+                    <li><a href="#section3" onclick="toggleSection('section3')">Les chevaux de trait</a></li>
+                    <li><a href="#section4" onclick="toggleSection('section4')">Les ânes</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    
-    <section class="collapsed" id="section1">
-        <div class="btn-container">
-            <button class="btn-top" onclick="toggleSection('section1')">Les races de sang</button>
-        </div>
-        <div class="text hidden-text">
-            <p><strong>Vingt-cinq races de chevaux de sang sont reconnues et gérées en France.</strong></p>
-            <p> Il s'agit de chevaux de taille et de poids moyens. La plupart des chevaux de course ou de sport sont des chevaux de sang.</p>
-            <p>Races Françaises :</p>
-            <div class="button-group">
-                <button class="small-btn" onclick="goToRacePage('anglo_arabe')">Anglo Arabe</button>
-                <button class="small-btn" onclick="goToRacePage('aqps')">AQPS</button>
-                <button class="small-btn" onclick="goToRacePage('camargue')">Camargue</button>
-                <button class="small-btn" onclick="goToRacePage('castillon')">Castillon</button>
-                <button class="small-btn" onclick="goToRacePage('cheval_corse')">Cheval Corse</button>
+        <section>
+            <h3>Les races gérées</h3>
+            <p>On parle de race gérée lorsqu'il existe un stud-book ou un registre et une association de race ou un organisme de sélection agréés par le Ministère de l’Agriculture.</p>
+            <p>L’IFCE est garant de la mise en œuvre du règlement du stud-book, certifie les origines et effectue la tenue matérielle du livre généalogique. 
+            Il assure l’émission des documents d’identification pour les animaux de ces races. En 2021, elles étaient au nombre de 56 et elles peuvent être réparties selon le type des équidés : chevaux de sang, poneys, chevaux de trait et ânes.</p>
 
-                <button class="small-btn" onclick="goToRacePage('auvergne')">Cheval de Race Auvergne</button>
-                <button class="small-btn" onclick="goToRacePage('cheval_de_dessage_francais')">Cheval de Dressage Français</button>
-                <button class="small-btn" onclick="goToRacePage('anglo_normand')">Cheval de sport Anglo-Normand</button>
-                <button class="small-btn" onclick="goToRacePage('cheval_du_vercors')">Cheval du Vercors de Barraquand</button>
-                <button class="small-btn" onclick="goToRacePage('henson')">Henson</button>
+        </section>
 
-                <button class="small-btn" onclick="goToRacePage('merens')">Mérens</button>
-                <button class="small-btn" onclick="goToRacePage('miniature_francais')">Miniature Français</button>
-                <button class="small-btn" onclick="goToRacePage('selle_francais')">Selle Français</button>
-                <button class="small-btn" onclick="goToRacePage('trotteur_francais')">Trotteur Français</button>
-                
+        <section class="collapsed" id="section1">
+            <div class="btn-container">
+                <button class="btn-top" onclick="toggleSection('section1')">Les races de sang</button>
             </div>
-            <p>Races Etrangères :</p>
-            <div class="button-group">
-                <button class="small-btn" onclick="goToRacePage('arabe')">Arabe</button>
-                <button class="small-btn" onclick="goToRacePage('barbe')">Barbe</button>
-                <button class="small-btn" onclick="goToRacePage('creme')">Crème</button>
-                <button class="small-btn" onclick="goToRacePage('criollo')">Criollo</button>
-                <button class="small-btn" onclick="goToRacePage('irish_cob')">Irish-Cob</button>
-                <button class="small-btn" onclick="goToRacePage('islandais')">Islandais</button>
-                <button class="small-btn" onclick="goToRacePage('lipizan')">Lipizan</button>
-                <button class="small-btn" onclick="goToRacePage('lustanien')">Lustanien</button>
-                <button class="small-btn" onclick="goToRacePage('pur_sang')">Pur-sang</button>
-                <button class="small-btn" onclick="goToRacePage('shygya')">Shagya</button>
-                <button class="small-btn" onclick="goToRacePage('trakenher')">Trakehner</button>
-
-
-        </div>
-        
-    </section>
+            <div class="text hidden-text">
+                <p><strong>Vingt-cinq races de chevaux de sang sont reconnues et gérées en France.</strong></p>
+                <p>Il s'agit de chevaux de taille et de poids moyens. La plupart des chevaux de course ou de sport sont des chevaux de sang.</p>
+                <p>Les chevaux font au moins 1,48m au garrot</p>
+                <p>Races Françaises :</p>
+                <div class="button-group">
+                    <button class="small-btn" onclick="goToRacePage('anglo_arabe')">Anglo Arabe</button>
+                    <button class="small-btn" onclick="goToRacePage('aqps')">AQPS</button>
+                    <button class="small-btn" onclick="goToRacePage('camargue')">Camargue</button>
+                    <button class="small-btn" onclick="goToRacePage('castillon')">Castillon</button>
+                    <button class="small-btn" onclick="goToRacePage('cheval_corse')">Cheval Corse</button>
+                    <button class="small-btn" onclick="goToRacePage('auvergne')">Cheval de Race Auvergne</button>
+                    <button class="small-btn" onclick="goToRacePage('cheval_de_dessage_francais')">Cheval de Dressage Français</button>
+                    <button class="small-btn" onclick="goToRacePage('anglo_normand')">Cheval de sport Anglo-Normand</button>
+                    <button class="small-btn" onclick="goToRacePage('cheval_du_vercors')">Cheval du Vercors de Barraquand</button>
+                    <button class="small-btn" onclick="goToRacePage('henson')">Henson</button>
+                    <button class="small-btn" onclick="goToRacePage('merens')">Mérens</button>
+                    <button class="small-btn" onclick="goToRacePage('miniature_francais')">Miniature Français</button>
+                    <button class="small-btn" onclick="goToRacePage('selle_francais')">Selle Français</button>
+                    <button class="small-btn" onclick="goToRacePage('trotteur_francais')">Trotteur Français</button>
+                </div>
+                <p>Races Etrangères :</p>
+                <div class="button-group">
+                    <button class="small-btn" onclick="goToRacePage('arabe')">Arabe</button>
+                    <button class="small-btn" onclick="goToRacePage('barbe')">Barbe</button>
+                    <button class="small-btn" onclick="goToRacePage('creme')">Crème</button>
+                    <button class="small-btn" onclick="goToRacePage('criollo')">Criollo</button>
+                    <button class="small-btn" onclick="goToRacePage('irish_cob')">Irish-Cob</button>
+                    <button class="small-btn" onclick="goToRacePage('islandais')">Islandais</button>
+                    <button class="small-btn" onclick="goToRacePage('lipizan')">Lipizan</button>
+                    <button class="small-btn" onclick="goToRacePage('lustanien')">Lustanien</button>
+                    <button class="small-btn" onclick="goToRacePage('pur_sang')">Pur-sang</button>
+                    <button class="small-btn" onclick="goToRacePage('shygya')">Shagya</button>
+                    <button class="small-btn" onclick="goToRacePage('trakenher')">Trakehner</button>
+                </div>
+            </div>
+        </section>
 
     <section class="collapsed" id="section2">
         <div class="btn-container">
@@ -108,8 +110,7 @@
 
             </div>
             <p> Il exsiste 4 catégories de poneys :</p>
-            <img src='../images/categories_poneys.jpeg'/>
-
+            <img src="images/categories_poneys.jpeg" alt="categories poneys" class="image-center">
     </section>
         </div>
 
@@ -205,48 +206,23 @@
 </footer>
 
 <script>
-    function toggleSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    section.classList.toggle('expanded');
-    section.classList.toggle('collapsed');
-    
-    // Trouver le texte à l'intérieur de la section
-    var text = section.querySelector('.text');
-    
-    // Vérifier si la section est ouverte ou fermée
-    if (section.classList.contains('expanded')) {
-        // Afficher le texte
-        text.classList.remove('hidden-text');
-    } else {
-        // Cacher le texte
-        text.classList.add('hidden-text');
-    }
-    
-  
-    var smallButtons = section.getElementsByClassName('small-btn');
-    for (var i = 0; i < smallButtons.length; i++) {
-        if (section.classList.contains('expanded')) {
-            smallButtons[i].style.display = 'inline-block';
-        } else {
-            smallButtons[i].style.display = 'none';
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var text = section.querySelector('.text');
+            section.classList.toggle('collapsed');
+            section.classList.toggle('expanded');
+            text.classList.toggle('hidden-text');
+            var smallButtons = text.getElementsByClassName('small-btn');
+            for (var i = 0; i < smallButtons.length; i++) {
+                smallButtons[i].style.display = text.classList.contains('hidden-text') ? 'none' : 'inline-block';
+            }
         }
-    }
-    }
 
-    function goToRacePage(race) {
-        // Redirige vers la page spécifique pour la race sélectionnée
-        window.location.href =  'races/'+ race + '.html';
-    }
-    function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        if (section.classList.contains("collapsed")) {
-            section.classList.remove("collapsed");
-            section.querySelector(".text").style.display = "block";
-        } else {
-            section.classList.add("collapsed");
-            section.querySelector(".text").style.display = "none";
+        function goToRacePage(race) {
+            // Redirige vers la page spécifique pour la race sélectionnée
+            window.location.href = 'races/' + race + '.html';
         }
-    }
+   
 </script>
     
 </body>

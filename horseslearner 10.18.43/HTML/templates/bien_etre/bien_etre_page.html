@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les bseoins</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+<body>
+    <div id="header-placeholder"></div> 
+    <main>
+    <header>
+        <h1>Le bien-être équin</h1>
+    </header>
+    </section>
+            <div class='button-container'>
+                <button id='besoins'>Les besoins</button>
+                <button id='logement'>Le logement</button>
+                <button id='alimentation'>L'alimentation</button>
+            </div>
+    <section>
+    <p>Le cheval, grand herbivore social, remplit de nombreuses fonctions : il est à la fois un animal d'élevage, un partenaire pour diverses activités (courses, saut d'obstacles, dressage, traction, médiation, randonnée, production de viande...), et une figure symbolique. Ainsi, il est perçu de multiples façons par les éleveurs, les utilisateurs et la société.</p>
+    <p> L'intérêt croissant pour le bien-être des chevaux a été mis en lumière dans une récente étude prospective sur la filière équine française (Jez et al., 2012). </p>
+    <p>L'Ifce a également constaté cet intérêt lors d'une enquête en ligne sur la perception du bien-être des chevaux par leurs propriétaires, qui a recueilli 3000 réponses en un mois (Scemama, 2013 ; Doligez, 2014).</p>
+    <p>Le bien-être peut être considéré comme la « bonne santé physique et mentale » de l’animal.</p>
+    <p>En 1998, la directive 98/58/CE du Conseil sur la protection des animaux dans les élevages s’inspire des cinq libertés élaborées par un organisme gouvernemental britannique : le « Farm Animal Welfare Council » (FAWC) en 1979.</p>
+    <p>Depuis, le programme européen sur le bien-être animal Welfare quality® a décliné plus précisément cette notion.</p>
+    </section>
+        <table>
+            <tr>
+                <th> Les 5 liberté</th>
+                <th> Les critères</th>
+            </tr>
+            <tr>
+                <td>Absence de faim, de soif</td>
+                <td>
+                    <ul>
+                        <li>absence de faim prolongée</li>
+                        <li>absence de soif prolongée</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Présence d'abris appropriés et maintien du confort</td>
+                <td>
+                    <ul>
+                        <li>confort du couchage</li>
+                        <li>confort thermique</li>
+                        <li>possibilité de mouvement</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Absence de maladies et de blessures</td>
+                <td>
+                    <ul>
+                        <li>absence de blessures</li>
+                        <li>absence de maladies</li>
+                        <li>absence de douleurs induites par les pratiques</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Possibilité d'exprimer les comportements normaux de son espèce</td>
+                <td rowspan="2">
+                    <ul>
+                        <li>expression du comportement social</li>
+                        <li>expression des autres comportements</li>
+                        <li>bonne relation Homme-animal</li>
+                        <li>état émotionnel positif</li>
+
+                    </ul>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Absence de peur et d'anxiété</td>
+            </tr>
+        </table>
+
+        <section class='left'>
+            <p>Le bien-être animal est donc un état multifactoriel complexe. Pour l’appréhender, il faut bien connaître :</p>
+                <ul>
+                    <li>Les besoins alimentaires, sociaux, d’espace et de confort de l’espèce animale considérée ;</li>
+                    <li>Les signes de bonne santé et d’atteinte à la santé ;</li>
+                    <li>Les comportements de l’espèce permettant de déceler des états émotionnels positifs ou négatifs.</li>
+                </ul>
+        </section>
+
+
+        
+    </main>
+    <script>
+        document.getElementById('besoins').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/bien_etre/besoins.html';
+        });
+        document.getElementById('logement').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/bien_etre/logement.html';
+        });
+        document.getElementById('alimentation').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/bien_etre/alimentation.html';
+        });
+    </script>
+</body>
+</html>

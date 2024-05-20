@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les besoins</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script src="../../JavaScripts/toggleSection.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+
+<body>
+    <div id="header-placeholder"></div> 
+
+    <main class='left'>
+    <header>
+        <h1> Les besoins des chevaux </h1>
+        <nav>
+            <ul>
+                <li><a href="#respirer" onclick="toggleSection('histoire')">Respirer</a></li>
+                <li><a href="#boire" onclick="toggleSection('classification')">Boire</a></li>
+                <li><a href="#manger" onclick="toggleSection('caracteristiques')">Manger</a></li>
+                <li><a href="#dormir" onclick="toggleSection('morphologie')">Dormir</a></li>
+                <li><a href="#communiquer" onclick="toggleSection('morphologie')">Communiquer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <p>Nous allons aborder des <strong class='bold'>six besoins vitaux</strong> des chevaux, indispensables à leur survie.</>
+    <p>Le non-respect de ces besoins essentiels peut mettre leur vie en danger.</p>
+    <p> Il est crucial de rappeler constamment ces points fondamentaux :<strong class='bold'> Respirer, Boire, Manger, Dormir, Bouger, et Communiquer.</strong><p>
+
+    
+    <section id='respirer'> 
+            <h2> Respirer </h2>
+        </section>
+        
+        <p>C'est évidemment le besoin vital le plus essentiel : sans respiration, il n'y a pas de vie, et le corps cesse de fonctionner très rapidement.</p>
+        <p>En dehors des cas d'asphyxie aiguë, toute atteinte de la fonction respiratoire réduit le potentiel du cheval, même à petite échelle.</p>
+        <p>Les chevaux sont particulièrement vulnérables sur le plan respiratoire, ce qui constitue le principal facteur limitant leurs performances sportives, avant même les problèmes orthopédiques.</p>
+        <p>Il est crucial de reconnaître que les chevaux passent souvent jusqu'à 23 heures sur 24 confinés dans des boxes, souvent mal ventilés et exposés aux poussières...</p>
+        <p>Il est donc essentiel de veiller à leur bien-être respiratoire afin de préserver leur pleine capacité respiratoire :
+        <ul class='left'> 
+            <li>Assurer une bonne ventilation des boxes (vérifiable avec la fumée d'une cigarette, qui doit monter vers le plafond et être rapidement éliminée, sans stagner) ;</p>
+            <li>Permettre aux chevaux de mettre la tête à l'extérieur du box ;</li>
+            <li>Éviter de secouer la paille pour faire la litière en présence des chevaux ;</li>
+            <li>Entretenir soigneusement les litières pour éviter les vapeurs d'ammoniac dues à l'urine ;</li>
+            <li>Sortir les chevaux le plus souvent possible (pré, paddocks, exercice, etc.) ;</li>
+            <li>Assurer une bonne vaccination et adopter des mesures raisonnées pour éviter la contagion des principales maladies respiratoires : grippe, rhinopneumonie, gourme, etc.</li>
+        </ul>
+    
+
+    <section>
+        <h2> Boire </h2>
+    </section>
+
+    <p>Le deuxième besoin vital des chevaux est de boire, sans quoi leur vie peut également prendre fin rapidement.</p>
+    <p>Contrairement à une idée répandue selon laquelle un cheval boit systématiquement 40 litres d'eau par jour, une étude menée sur une année auprès d'une vingtaine de chevaux a révélé des variations considérables dans leur consommation quotidienne.</p>
+    <p>Ces variations dépendent notamment des conditions météorologiques, qui sont le principal facteur influençant la consommation d'eau.</p>
+    <p>Par exemple, les relevés montrent qu'un cheval peut passer d'une consommation de 12 litres par jour à 38 litres par jour du jour au lendemain, et dépasser rarement les 40 litres quotidiens.</p>
+
+    
+    <img class='image-center' src='../../images/graph_boire.png'/>
+
+
+    <p><strong class='bold'>En pratique :</strong></p>
+    <ul class='left'> 
+        <li>Vérifier matin est soir que les abreuvoirs automatiques fonctionnent bien si c’est ce système d’abreuvement qui est en place ;</li>
+        <li>Remplir les seaux très régulièrement si l’abreuvement est au seau ;</li>
+        <li>Vérifier que les points d’eau ne sont pas gelés au pré ;</li>
+        <li>Savoir néanmoins que les chevaux peuvent être privés d’eau facilement une demi journée, à condition d’être bien nourris en foin, car le caecum (une des partie du gros intestin) leur sert de réserve, c’est un peu leur « bosse de chameau ».</li>
+        <li>Etre très vigilant sur l’hygiène de l’eau, et en particulier le risque de contamination par l’urine de rongeur, qui transmet une des grandes maladies des chevaux : la Leptospirose.</li>
+        <li>Savoir que les chevaux sont très sensibles au goût de l’eau, il leur arrive même de rechigner à boire lorsqu’on leur change leur eau habituelle.</li>
+    </ul>
+
+    
+
+    <section id='manger'>
+        <h2> Manger</h2>
+    </section>
+
+    <p>Le troisième besoin vital des chevaux est la nutrition. Sans une alimentation adéquate, leur corps s'épuise et leur pronostic vital est compromis.</p>
+    <p> Leur régime alimentaire de base se compose principalement d'herbe, sous forme fraîche dans les pâturages ou séchée en foin. Le foin doit être disponible en quantité illimitée, avec un minimum recommandé d'environ 8 kg par jour pour éviter des problèmes digestifs tels que les coliques.</p>
+    <p> Cependant, pour les chevaux plus actifs, des aliments concentrés contenant des céréales et des huiles sont nécessaires pour répondre à leurs besoins énergétiques.</p>
+    <p> Voir plus sur <a class='brown' href='HTML/templates/bien_etre/alimentation.html'>l'alimentation</a>
+
+    <section id='dormir'>
+        <h2> Dormir </h2>
+    </section>
+
+    <p>Le quatrième besoin vital des chevaux est le sommeil, mais il diffère de celui des humains.</p>
+    <p> Contrairement à une idée répandue, les chevaux ne dorment pas debout. Ils somnolent lorsqu'ils sont debout, mais un sommeil profond survient lorsqu'ils sont couchés, soit sur le ventre (en position "vache"), soit sur le côté (appelé "décubitus latéral" en termes scientifiques).</p>
+    <p> Ces périodes de sommeil profond sont courtes, d'environ 10 à 15 minutes, et se répartissent tout au long de la journée ou de la nuit, totalisant environ deux à trois heures par jour.</p>
+    <p> Cette méthode de "sommeil fractionné" permet aux chevaux d'échapper aux prédateurs. Dans la nature, d'autres chevaux assurent la surveillance en faisant des rotations.</p>
+    <img class='image-center' src='../../images/sommeil.jpeg'/>
+
+    <p><strong class='bold'>En pratique :</strong></p>
+    <ul>
+        <li>Eviter de déranger un cheval couché, le laisser tranquille 10 minutes pour qu’il puisse prendre son temps de sommeil, revenir plus tard ;</li>
+        <li>Noter lorsqu’un cheval est couché, car si 10 à 15 minutes sont normales, plus c’est anormal et il faut aller voir ce qui se passe (maladie, coliques, …) ;</li>
+        <li>Eviter les appareils radio à fond dans les écuries, les chevaux sont sensibles au bruit et cela les empêche de dormir ; </li>
+        <li>Un cheval stressé (par exemple lors d’une compétition) ne se couche pas, et donc ne dort pas, c’est une information importante pour évaluer le niveau de stress ; </li>
+        <li>Lors de transports longs, durant lesquels les chevaux ne peuvent pas se coucher, il faut prévoir de la fatigue à l’arrivée et un temps de récupération.</li>
+    </ul>
+
+    <section id='bouger'>
+        <h2> Bouger </h2>
+    </section>
+
+    <p>Un autre besoin vital pour les chevaux est de bouger, se mouvoir et se déplacer.</p>
+    <p> Dans leur environnement naturel, les chevaux passent au moins 8 heures par jour à se déplacer, que ce soit pour chercher de la nourriture ou pour éviter leurs prédateurs naturels.</p>
+    <p> Le mouvement est essentiel pour maintenir le bon fonctionnement de leur corps, notamment pour stimuler les appareils respiratoire et digestif.</p>
+
+    <p><strong class='bold'>En pratique :</strong></p>
+    <ul>
+        <li>Eviter les 23 heures sur 24, statique au box, et avoir toujours en tête que « le pire ennemi du cheval c’est le box » ;</li>
+        <li>Tous les prétextes sont bons pour faire bouger un cheval : exercice, marcheur, tapis roulant, balade, … </li>
+        <li>Savoir que les chevaux bougent peu au pré, aussi pour un cheval sportif il faut des mouvements qui sollicitent plus le corps.</li>
+    </ul>
+
+    <p> Malgré tout, il est remarquable de constater que les chevaux peuvent tolérer des périodes d'immobilité exceptionnellement longues sans nécessairement développer de problèmes de santé.</p>
+    <p> Par exemple, certains chevaux en convalescence après une chirurgie de fracture peuvent rester immobiles pendant des périodes prolongées. Cependant, ces cas sont exceptionnels et les chevaux concernés bénéficient généralement d'un suivi médical intensif et de soins attentifs, ce qui compense leur manque d'activité physique.</p>
+
+    <section id='bouger'>
+        <h2> Communiquer </h2>
+    </section>
+
+    <p>​Dernier besoin vital, mais à connaître : laisser un cheval seul, sans congénères, sans compagnie, peut engager son pronostic vital : dépérissement, stress chronique et toutes ses conséquences néfastes, coliques notamment…</p>
+    <p>Le cheval est un animal grégaire (= animal de groupe), il vit en harde dans la nature, c’est tout sauf un animal solitaire, il cherche les autres, les appelle, les touche, les voit, les sent, tous ses sens sont en éveil, et la solitude est anormale pour lui, c’est une source d’angoisse.</p>
+    <p>Etre avec les autres, c’est communiquer, avec tous ses sens, les postures, les mouvements d’oreilles, les odeurs, les hennissements. Il faut permettre cela et éviter à tout prix l’isolement total d’un individu, sans quoi les problèmes de santé, liés au mal-être, vont vite arriver, et peuvent avoir une fin catastrophique, tant les chevaux sont sensibles au stress.</p>
+
+    <p><strong class='bold'>En pratique :</strong></p>
+        <ul> 
+            <li>Pas de cheval seul au pré ;</li>
+            <li>Mettre un nombre pair de chevaux ensemble, ils s’apparient souvent pour se gratter, chasser les mouches de l’autre avec leurs queues ;</li>
+            <li>Sevrer les poulains par paires ;</li>
+            <li>Faire en sorte dans une écurie que les chevaux puissent se voir, sentir leurs odeurs, entendre leurs hennissements ;</li>
+            <li>Si impossible d’avoir un autre cheval, tacher de trouver un animal compagnon, on voit de tout : lapin, poney, chèvre, mouton…</li>
+            <li>Si cheval seul par obligation, compenser par la relation à l’humain : passer du temps avec lui, brosser, pansage long, nombreuses balades… mais sans jamais le laisser croire que vous êtes un congénère, ce serait dangereux.</li>
+        </ul>
+
+
+
+</main>
+</body>
+</html>

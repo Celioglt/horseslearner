@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologie</title>
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+     <div id="header-placeholder"></div>
+    
+</head>
+<body>
+    
+    <main>
+    <header>
+        <h1> Biologie du cheval </h1>
+    </header>
+
+        <section>
+            <p>Morphologie : description physique externe d'un être vivant.</p>
+            <p>Anatomie : description physique interne d'un être vivant.</p>
+            <p>Physiologie : Science qui étudie les fonctions et les propriétés des organes et des tissus d'un être vivant.</p>
+        </section>
+            <div class='button-container'>
+                <button id='morphologie'>Morphologie</button>
+                <button id='anatomie'>Anatomie</button>
+                <button id='physiologie'>Physiologie</button>
+            </div>
+
+
+    </main>
+    <script>
+        document.getElementById('morphologie').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/biologie/morphologie.html';
+        });
+        document.getElementById('anatomie').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/biologie/anatomie.html';
+        });
+        document.getElementById('physiologie').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/biologie/physiologie.html';
+
+        });
+
+    </script>
+</body>
+</html>
+

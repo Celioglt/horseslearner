@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="JavaScripts/loadHeader.js"></script>
+    <script src="JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+</head>
+
+</head>
+<body>
+
+    <div id="header-placeholder"></div> 
+
+    
+
+    <main>
+
+        <div class='boutton-container'>
+            <button class='button' id="galops">Réviser les galops</button>
+            <button class='button' id="ramucho">Ramucho</button>
+        </div>
+
+    <section>
+        <h2>Jeux</h2>
+        <div class='boutton-container'>
+        <button class='button' id="disciplines">Les disciplines équestres</button>
+        <button class='button' id="empreintes">Empreintes des mamifères</button>
+    </div>
+    </section>
+    
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Célio et Lou. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+         
+        document.getElementById('galops').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/galops/page_galops.html'; 
+        });
+        document.getElementById('ramucho').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/ramucho.html'; 
+        });
+        document.getElementById('disciplines').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/jeux/disciplines.html'; 
+        });
+        document.getElementById('empreintes').addEventListener('click', function() {
+            window.location.href = '/HTML/templates/jeux/empreintes.html'; 
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html') // Assurez-vous que le chemin est correct
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../JavaScripts/loadHeader.js"></script>
+    <script src="../JavaScripts/toggleMenu.js"></script>
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+     <div id="header-placeholder"></div>
+</head>
+<body>
+
+    <header>
+        <h1>Horses Learner</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id='centered'>Race/h2>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#section1" onclick="toggleSection('description')"></a>Origine et description</li>
+                    <li><a href="#section2" onclick="toggleSection('physique')"></a>Physique</li>
+                    <li><a href="#section2" onclick="toggleSection('comportement')"></a>Comportement</li>
+                    <li><a href="#section3" onclick="toggleSection('sante')"></a>Santé</li>
+          
+                </ul>
+            </nav>
+        </header>
+
+        <section id='description'></section>
+         <section id='physique'></section>
+        <section id='comportement'></section>
+        <section id='santé'></section>
+    </main>
+</body>
+</html>

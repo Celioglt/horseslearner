@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML/styles/styles.css">
+    <script src="../../JavaScripts/loadHeader.js"></script>
+    <script src="disciplines.js"></script>
+    <script src="../../JavaScripts/toggleMenu.js"></script>
+    
+    <script>
+        const pathRelativeToRoot='http://localhost:8080/HTML/'
+            loadHeader(pathRelativeToRoot);
+    </script>
+    <style>
+        label {
+            color: black; /* Couleur du texte */
+            font-size: 16px; /* Taille de la police */
+            font-family: Coco, sans-serif; /* Police de caractères */
+        } 
+        ul {
+            list-style-type: none;
+            padding-left: 0; /* Optionnel : pour éviter un espace supplémentaire */
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-container input[type="checkbox"] {
+            width: 20px; /* Largeur de la case à cocher */
+            height: 20px; /* Hauteur de la case à cocher */
+            margin-right: 10px; /* Marge à droite de la case à cocher */
+        }
+        #totalPoints {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #f6d9d7;
+        color: black;
+        transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: grey;
+        }
+    </style>
+    
+
+    <div id="header-placeholder"></div>
+</head>
+<body>
+
+    <main>
+        <h1>Disciplines équestres</h1>
+        <p> Cocher les disciplines exsistantes. Bonne réponse : +1, mauvaise réponse : -1.</p>
+        <input type='button' class="button" value="Commencer" onclick="createDisciplinesList()">
+        <section>
+            <div class="columns">
+                <ul id="disciplinesList1"></ul>
+                <ul id="disciplinesList2"></ul>
+                <ul id="disciplinesList3"></ul>
+            </div>
+        </section>
+        <div class='button-container'>
+            
+            <input type='button' class="button" value="Valider" onclick="calculatePoints()">
+        </div>
+        <div id="totalPoints"></div> <!-- Div pour afficher le total des points -->
+    </main>
+    <footer>
+        <p>© 2024 Horses Learner. Tous droits réservés.</p>
+    </footer>
+    
+</body>
+</html>
